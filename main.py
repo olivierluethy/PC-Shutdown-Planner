@@ -1,18 +1,18 @@
 import os
 import time
 
-# get current time
-current_time = time.localtime()
-
 # set shutdown time to 10 pm
 shutdown_time = time.strptime("22:00:00", "%H:%M:%S")
 
-# calculate time difference in seconds
-time_diff = time.mktime(shutdown_time) - time.mktime(current_time)
+while True:
+    # get current time
+    current_time = time.localtime()
 
-# sleep until shutdown time
-if time_diff > 0:
-    time.sleep(time_diff)
+    # check if current time is greater than or equal to shutdown time
+    if current_time >= shutdown_time:
+        # shutdown the computer
+        os.system("shutdown /s /t 1")
+        break
 
-# shutdown the computer
-os.system("shutdown /s /t 1")
+    # sleep for 60 seconds before checking the time again
+    time.sleep(60)
