@@ -1,8 +1,14 @@
-## PC Shutdown Planner
+<p align="center">
+  <a href="https://github.com/olivierluethy/PC-Shutdown-Planner">
+    <img src="logo.png" alt="Logo" width="80" height="80">
+  </a>
 
-PC Shutdown Planner is a simple Python application that allows users to schedule automatic shutdowns for their computers. This tool helps users plan shutdowns at specific dates and times, allowing for efficient management of system shutdowns.
-
-The idea came to me when I wanted to go to bed at 10. Because I was working hard on something, I forgot the time and it was already 12. So now it will happen automatically, so I'll get enough sleep.
+  <h3 align="center">Welcome to the <strong>PC Shutdown Planner!</strong></h3>
+  <p align="center">
+    PC Shutdown Planner is a simple Python application that allows users to schedule automatic shutdowns for their computers. This tool helps users plan shutdowns at specific dates and times, allowing for efficient management of system shutdowns.
+    The idea came to me when I wanted to go to bed at 10. Because I was working hard on something, I forgot the time and it was already 12. So now it will happen automatically, so I'll get enough sleep.
+  </p>
+</p>
 
 ### How It Works
 
