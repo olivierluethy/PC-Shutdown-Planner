@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/olivierluethy/PC-Shutdown-Planner">
-    <img src="logo.png" alt="Logo" width="200" height="250">
+    <img src="logo.png" alt="Logo" width="200" height="200">
   </a>
 
   <h3 align="center">Welcome to the <strong>PC Shutdown Planner!</strong></h3>
