@@ -56,6 +56,16 @@ python pc_shutdown_planner.py
 4. If the input is valid, you will receive a confirmation message indicating the scheduled shutdown time.
 5. A countdown timer will be displayed, showing the remaining time until the scheduled shutdown.
 
+### Issues during the project
+1. Error message: Exception: Could not load icon C:\Users\Username\Documents\Projectname\logo.png
+   We encountered this error message while adding an icon to the project in Tkinder. If you meet this problem, click [here](https://stackoverflow.com/questions/64601038/could-not-load-icon-plyer-library):
+
+   If it still does not work as it did for us, do the following
+   1. Close and re-open Visual Studio Code, and
+   2. Put the raw PNG file into a .ico converter and replace it with the old .ico file.
+  
+   Then it should work!
+
 ### Note
 
 - Ensure that you have saved any important work before scheduling a shutdown, as the application initiates an automatic shutdown of the system. But you will be notified 10 minutes before a shutdown happens, so you know how much time remains.
