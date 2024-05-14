@@ -4,7 +4,18 @@ from tkinter import messagebox
 from datetime import datetime
 from tkcalendar import DateEntry
 from time import sleep
+from plyer import notification
 import schedule
+
+# Funktion zur Anzeige der Notifikation
+def show_notification(title, message, icon_path):
+    notification.notify(
+        title=title,
+        message=message,
+        app_name="Shutdown Reminder",
+        app_icon=icon_path,
+        timeout=15
+    )
 
 def countdown(shutdown_datetime, countdown_label):
     informed = False
@@ -23,10 +34,13 @@ def countdown(shutdown_datetime, countdown_label):
             # Check if less than 10 minutes remaining
             if time_difference.total_seconds() <= 600:
                 if not informed:
-                    messagebox.showinfo("Info", "10 minutes until shutdown. Please save your work.")
+                    # Setze den absoluten Pfad zum Bild
+                    icon_path = os.path.join(os.getcwd(), "assets/alert.ico")
+
+                    show_notification("Important", "10 minutes until shutdown. Please save your work.", icon_path)
                     informed = True
 
-            countdown_label.config(text=f"Time until shutdown: {int(hours)} hours, {int(mins)} minutes, {int(secs)} seconds")
+            countdown_label.config(text=f"Time until shutdown: {int(hours)} hours {int(mins)} minutes {int(secs)} seconds")
             root.update()  # Update the Tkinter window
             sleep(1)
     except Exception as e:
@@ -75,6 +89,9 @@ def validate_input():
 # Define the main window
 root = tk.Tk()
 root.title("Shutdown Scheduler")
+
+# Set desktop icon
+root.iconbitmap("assets/icon.ico")
 
 # Create a frame for user input
 input_frame = tk.Frame(root)
